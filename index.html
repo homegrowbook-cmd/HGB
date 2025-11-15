@@ -19,463 +19,215 @@
             --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.65);
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-                "Helvetica Neue", sans-serif;
+                         "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                         "Helvetica Neue", sans-serif;
             background: radial-gradient(circle at top, #15181d 0, #050606 55%);
             color: var(--text);
         }
+        a { color: inherit; text-decoration: none; }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* === NAVBAR === */
-
+        /* NAV */
         .nav {
             position: sticky;
             top: 0;
             z-index: 20;
             backdrop-filter: blur(18px);
-            background: linear-gradient(
-                to bottom,
-                rgba(5, 6, 6, 0.96),
-                rgba(5, 6, 6, 0.75)
-            );
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            background: rgba(5,6,6,0.9);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-
         .nav-inner {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 10px 16px;
+            padding: 12px 16px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            align-items: center;
         }
-
         .nav-brand {
             display: flex;
-            align-items: center;
             gap: 10px;
+            align-items: center;
         }
-
         .nav-logo {
             width: 34px;
             height: 34px;
-            border-radius: 999px;
             background: #000;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.16);
             display: flex;
-            align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 1px #000;
-            overflow: hidden;
+            align-items: center;
         }
-
         .nav-logo img {
             width: 80%;
             height: 80%;
             object-fit: contain;
         }
-
         .nav-title {
             font-size: 1.1rem;
             font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: lowercase;
         }
-
         .nav-links {
             display: flex;
-            align-items: center;
             gap: 18px;
-            font-size: 0.95rem;
-        }
-
-        .nav-link {
-            padding: 4px 0;
-            position: relative;
-            color: var(--muted);
-        }
-
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0;
-            height: 2px;
-            border-radius: 999px;
-            background: var(--accent);
-            transition: width 0.18s ease-out;
-        }
-
-        .nav-link:hover {
-            color: var(--text);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            padding: 7px 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(122,255,154,0.7);
-            background: radial-gradient(circle at top left, var(--accent-soft), #050606);
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
             align-items: center;
-            gap: 6px;
+        }
+        .nav-link {
+            font-size: 0.95rem;
+            color: var(--muted);
+            position: relative;
+        }
+        .nav-cta {
+            padding: 6px 15px;
+            border-radius: 99px;
+            border: 1px solid rgba(122,255,154,0.7);
+            background: var(--accent-soft);
+            font-weight: 600;
         }
 
-        .nav-cta span {
-            font-size: 1.1rem;
-        }
-
-        /* Mobile nav: links hidden, only CTA */
         @media (max-width: 720px) {
-            .nav-links .nav-link {
-                display: none;
-            }
+            .nav-link { display: none; }
         }
 
-        /* === LAYOUT WRAPPER === */
-
+        /* MAIN */
         main {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 24px 16px 60px;
+            padding: 30px 16px 60px;
         }
+        section { margin-top: 70px; }
 
-        section {
-            margin-top: 60px;
-        }
-
-        /* === HERO === */
-
+        /* HERO */
         .hero {
-            margin-top: 36px;
+            margin-top: 40px;
             display: grid;
-            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
             gap: 32px;
+            grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
             align-items: center;
         }
-
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
+        @media (max-width: 880px) {
+            .hero { grid-template-columns: 1fr; }
         }
-
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 3px 10px;
-            border-radius: 999px;
-            background: rgba(10, 215, 110, 0.09);
-            border: 1px solid rgba(122, 255, 154, 0.4);
-            font-size: 0.78rem;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 99px;
+            background: rgba(122,255,154,0.12);
+            border: 1px solid rgba(122,255,154,0.3);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
             color: var(--muted);
             margin-bottom: 14px;
         }
-
-        .hero-badge span {
-            font-size: 1rem;
-        }
-
         .hero h1 {
+            font-size: clamp(2.3rem,5vw,3rem);
             margin: 0 0 12px;
-            font-size: clamp(2.3rem, 5vw, 3rem);
-            letter-spacing: 0.02em;
         }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
+        .hero h1 span { color: var(--accent); }
         .hero-sub {
-            margin: 0;
-            font-size: 1.02rem;
+            font-size: 1.05rem;
             color: var(--muted);
+            line-height: 1.55;
         }
-
-        .hero-sub strong {
-            color: var(--text);
-        }
-
         .hero-actions {
-            margin-top: 26px;
+            margin-top: 28px;
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
-
-        .btn-primary,
-        .btn-ghost {
-            border-radius: 999px;
-            padding: 11px 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-
         .btn-primary {
+            padding: 12px 20px;
+            border-radius: 99px;
             background: linear-gradient(135deg, var(--accent), #a6ffc3);
             color: #071409;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            font-weight: 600;
         }
-
-        .btn-primary span {
-            font-size: 1.2rem;
-        }
-
         .btn-ghost {
-            background: rgba(13, 16, 19, 0.9);
-            border-color: rgba(255, 255, 255, 0.16);
+            padding: 11px 20px;
+            border-radius: 99px;
+            border: 1px solid rgba(255,255,255,0.16);
             color: var(--muted);
+            font-weight: 600;
         }
-
-        .btn-ghost span {
-            font-size: 1.1rem;
-        }
-
-        .hero-meta {
-            margin-top: 18px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 0.82rem;
-            color: var(--muted);
-        }
-
-        .hero-meta span {
-            padding: 4px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(0, 0, 0, 0.35);
-        }
-
-        /* Hero card with logo */
 
         .hero-card {
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            background: radial-gradient(circle at top, #161b20, #050607);
+            background: #0A0C0D;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 26px;
             box-shadow: var(--shadow-soft);
-            padding: 26px 22px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
         }
-
-        .hero-logo-wrap {
-            display: flex;
-            justify-content: center;
-        }
-
         .hero-logo {
-            width: min(210px, 60vw);
-            height: min(210px, 60vw);
-            border-radius: 26px;
+            width: 190px;
+            height: 190px;
             background: #000;
-            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.14);
+            margin: 0 auto 20px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
-            overflow: hidden;
+            align-items: center;
         }
-
         .hero-logo img {
             width: 80%;
             height: 80%;
             object-fit: contain;
         }
-
         .hero-card-caption {
-            font-size: 0.9rem;
             color: var(--muted);
             text-align: center;
+            font-size: 0.9rem;
         }
-
-        .hero-specs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px;
-            font-size: 0.82rem;
-        }
-
-        .spec-pill {
-            padding: 8px 10px;
-            border-radius: 12px;
-            background: rgba(13, 16, 19, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .spec-label {
-            display: block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--muted);
-            margin-bottom: 3px;
-        }
-
-        .spec-value {
-            font-weight: 500;
-        }
-
-        /* === SECTIONS === */
 
         .section-heading {
-            font-size: 1.4rem;
-            margin: 0 0 8px;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
         }
-
         .section-sub {
-            margin: 0 0 26px;
+            font-size: 1rem;
             color: var(--muted);
-            font-size: 0.96rem;
             max-width: 640px;
         }
-
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
         }
 
         .card {
-            border-radius: var(--radius);
-            background: rgba(8, 10, 12, 0.96);
-            border: 1px solid var(--border);
-            padding: 18px 18px 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+            padding: 18px 20px;
+            border-radius: 14px;
+            background: #08090A;
+            border: 1px solid rgba(255,255,255,0.06);
         }
-
-        .card-icon {
-            font-size: 1.35rem;
-            margin-bottom: 10px;
-        }
-
-        .card-title {
-            margin: 0 0 6px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .card-text {
-            margin: 0;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-
-        /* Growlog section */
-
-        .growlog-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-            gap: 22px;
-        }
-
-        @media (max-width: 880px) {
-            .growlog-layout {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-
-        .growlist {
-            list-style: none;
-            padding-left: 0;
-            margin: 10px 0 0;
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-
-        .growlist li {
-            padding: 4px 0;
-        }
-
-        .badge-soft {
-            display: inline-flex;
-            padding: 3px 9px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            font-size: 0.75rem;
-            color: var(--muted);
-            margin-right: 6px;
-            margin-bottom: 4px;
-        }
-
-        /* Kontakt */
-
-        .contact-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .contact-pill {
-            border-radius: 999px;
-            padding: 8px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            background: rgba(7, 9, 10, 0.9);
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--muted);
-        }
-
-        .contact-pill strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        /* Footer */
+        .card-title { font-size: 1rem; font-weight: 600; margin: 0 0 6px; }
+        .card-text { color: var(--muted); font-size: 0.9rem; }
 
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 16px;
+            margin-top: 60px;
             text-align: center;
-            font-size: 0.8rem;
+            padding: 18px;
             color: var(--muted);
+            font-size: 0.82rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
             background: #050505;
         }
     </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
 <header class="nav">
     <div class="nav-inner">
         <a href="#top" class="nav-brand">
             <div class="nav-logo">
-                <!-- Logo-Datei einbinden: ersetze den Pfad durch deinen Dateinamen -->
-                <img src="assets/homegrowbook-logo.png" alt="Homegrowbook Logo">
+                <img src="assets/homegrowbook-logo.png" alt="Logo">
             </div>
             <div class="nav-title">homegrowbook</div>
         </a>
@@ -484,10 +236,10 @@
             <a href="#projekt" class="nav-link">Projekt</a>
             <a href="#automation" class="nav-link">Automation</a>
             <a href="#growlogs" class="nav-link">Growlogs</a>
-            <a href="#kontakt" class="nav-link">Kontakt</a>
-            <a class="nav-cta" href="https://instagram.com/home.growbook" target="_blank" rel="noopener">
-                <span>●</span> Instagram
-            </a>
+            <a class="nav-cta"
+               href="https://www.instagram.com/homegrowbook/"
+               target="_blank"
+               rel="noopener noreferrer">Instagram</a>
         </div>
     </div>
 </header>
@@ -497,216 +249,102 @@
     <!-- HERO -->
     <section class="hero">
         <div>
-            <div class="hero-badge">
-                <span>⏱</span> Live-Projekt · im Aufbau
-            </div>
-            <h1>
-                Smart Indoor Growing<br>
-                mit <span>Homegrowbook</span>
-            </h1>
+            <div class="hero-badge">Projekt · live im Aufbau</div>
+
+            <h1>Smart Indoor Growing<br><span>mit Homegrowbook</span></h1>
+
             <p class="hero-sub">
-                Ich baue ein <strong>vollautomatisiertes Grow-Setup</strong> mit
-                Raspberry&nbsp;Pi, Sensoren und Home&nbsp;Assistant – inklusive
-                <strong>Dokumentation, Daten-Auswertung und Community-Content</strong>.
+                Ein vollautomatisiertes Grow-System auf Basis von Raspberry&nbsp;Pi,
+                Home&nbsp;Assistant, Sensoren & Dokumentation.  
+                Alles offen, transparent und für alle Grower nutzbar.
             </p>
 
             <div class="hero-actions">
-                <a href="#projekt" class="btn-primary">
-                    Projekt entdecken <span>↘</span>
+                <a href="#projekt" class="btn-primary">Projekt ansehen</a>
+                <a href="https://www.instagram.com/homegrowbook/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-ghost">
+                    Instagram Updates
                 </a>
-                <a href="https://instagram.com/home.growbook" target="_blank" rel="noopener" class="btn-ghost">
-                    Daily Updates auf Instagram <span>📲</span>
-                </a>
-            </div>
-
-            <div class="hero-meta">
-                <span>Raspberry Pi Grow-Hub</span>
-                <span>Home Assistant · Docker</span>
-                <span>Sensoren · VPD · PPFD</span>
             </div>
         </div>
 
-        <aside class="hero-card" aria-label="Projektstatus Homegrowbook">
-            <div class="hero-logo-wrap">
-                <div class="hero-logo">
-                    <!-- Hier ebenfalls dein Logo -->
-                    <img src="assets/homegrowbook-logo.png" alt="Homegrowbook Icon">
-                </div>
+        <div class="hero-card">
+            <div class="hero-logo">
+                <img src="assets/homegrowbook-logo.png" alt="Homegrowbook Logo">
             </div>
-            <div class="hero-card-caption">
-                Logo &amp; Projekticon für das Homegrowbook-Ökosystem:
-                Indoor-Grow trifft Automation &amp; Wissen.
-            </div>
-            <div class="hero-specs">
-                <div class="spec-pill">
-                    <span class="spec-label">Stack</span>
-                    <span class="spec-value">Raspberry Pi · Ubuntu · Docker</span>
-                </div>
-                <div class="spec-pill">
-                    <span class="spec-label">Control</span>
-                    <span class="spec-value">Home Assistant, Sensoren, Automationen</span>
-                </div>
-                <div class="spec-pill">
-                    <span class="spec-label">Content</span>
-                    <span class="spec-value">Growlogs, Tutorials, Tests &amp; Reviews</span>
-                </div>
-            </div>
-        </aside>
+            <p class="hero-card-caption">
+                Das offizielle Symbol für das Homegrowbook-Ökosystem:  
+                Wissen, Wachstum, Automation.
+            </p>
+        </div>
     </section>
 
     <!-- PROJEKT -->
     <section id="projekt">
-        <h2 class="section-heading">🌱 Das Projekt Homegrowbook</h2>
+        <h2 class="section-heading">🌱 Das Projekt</h2>
         <p class="section-sub">
-            Homegrowbook ist ein <strong>offenes, dokumentiertes Grow-Labor</strong>.
-            Ziel: Ein Setup, das <strong>möglichst viel alleine regelt</strong> –
-            von Licht und Klima bis hin zu Logging, Auswertung und Content-Produktion.
+            Ein dokumentierter High-Tech-Grow: Sensoren, Automation, Dashboards
+            und komplette Transparenz über jeden Schritt.
         </p>
 
         <div class="grid-3">
-            <article class="card">
-                <div class="card-icon">🏠</div>
+            <div class="card">
                 <h3 class="card-title">Smart Grow Hub</h3>
-                <p class="card-text">
-                    Zentrale Steuerung auf einem Raspberry&nbsp;Pi:
-                    Home&nbsp;Assistant, Sensor-Daten, Automationen und
-                    Dashboards laufen an einem Ort.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">📊</div>
+                <p class="card-text">Home Assistant + Raspberry Pi steuern das gesamte System.</p>
+            </div>
+            <div class="card">
                 <h3 class="card-title">Daten statt Gefühl</h3>
-                <p class="card-text">
-                    Temperatur, Luftfeuchtigkeit, VPD, Lichtstärke und mehr –
-                    alle Werte werden erfasst, visualisiert und später
-                    zur Optimierung genutzt.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">📚</div>
-                <h3 class="card-title">Dokumentierte Runs</h3>
-                <p class="card-text">
-                    Jeder Grow wird wie ein „Kapitel“ im Homegrowbook:
-                    Setup, Tagebuch, Fotos, Fehler, Learnings – transparent
-                    und wiederverwendbar.
-                </p>
-            </article>
+                <p class="card-text">VPD, Temperatur, Feuchte, Licht – alles erfasst & analysiert.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Dokumentation</h3>
+                <p class="card-text">Jeder Grow wird ein Kapitel im Homegrowbook.</p>
+            </div>
         </div>
     </section>
 
     <!-- AUTOMATION -->
     <section id="automation">
-        <h2 class="section-heading">⚙️ Automation &amp; Technik</h2>
+        <h2 class="section-heading">⚙️ Automation</h2>
         <p class="section-sub">
-            Im Fokus stehen <strong>zuverlässige Automationen</strong>, die
-            wirklich alltagstauglich sind: weniger Fummeln, mehr Beobachten und
-            Lernen. Langfristig sollen komplette <strong>Konfig-Templates</strong>
-            für andere Grower entstehen.
+            Das Ziel: ein System, das sich selbst steuert. Mit Sensoren,
+            Triggern & intelligenten Regeln.
         </p>
 
         <div class="grid-3">
-            <article class="card">
-                <div class="card-icon">🧠</div>
+            <div class="card">
                 <h3 class="card-title">Home Assistant</h3>
-                <p class="card-text">
-                    Sensoren, Aktoren, Szenen und Automationen laufen in Home&nbsp;Assistant –
-                    inklusive Dashboards für Smartphone, Tablet und Desktop.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">🌡️</div>
-                <h3 class="card-title">Sensor-Integration</h3>
-                <p class="card-text">
-                    Tapo, Smart-Plugs, Klima-Sensoren, Licht-Berechnungen (PPFD/VPD)
-                    und mehr – angebunden über lokale Integrationen, ohne Cloud-Zwang.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon">🤖</div>
-                <h3 class="card-title">Automatisierte Abläufe</h3>
-                <p class="card-text">
-                    Licht, Lüfter, Bewässerung &amp; Benachrichtigungen basieren auf
-                    echten Messwerten. Ziel: stabile Umgebung bei minimalem manuellen Aufwand.
-                </p>
-            </article>
+                <p class="card-text">Zentrale Plattform für Regeln, Sensorwerte und Kontrolle.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Sensor-System</h3>
+                <p class="card-text">Feuchte, Temperatur, VPD, Licht – alles integriert.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Automatische Abläufe</h3>
+                <p class="card-text">Lüfter, Licht & Feuchte werden automatisch gesteuert.</p>
+            </div>
         </div>
     </section>
 
     <!-- GROWLOGS -->
     <section id="growlogs">
-        <h2 class="section-heading">📓 Growlogs &amp; Dokumentation</h2>
+        <h2 class="section-heading">📓 Growlogs</h2>
         <p class="section-sub">
-            Die Webseite wird nach und nach um <strong>öffentliche Growlogs,
-            Templates und Tools</strong> erweitert. Der Plan: eine modernere,
-            eigenständige Alternative zu klassischen Grow-Foren &amp; Diary-Seiten.
+            Bald verfügbar: Dokumentierte Runs, Bilder, Messwerte & Templates.
         </p>
-
-        <div class="growlog-layout">
-            <article class="card">
-                <h3 class="card-title">Was hier entstehen wird</h3>
-                <p class="card-text">
-                    Geplant ist ein Bereich, in dem jede Pflanze wie ein eigenes
-                    „Projekt“ behandelt wird – mit klaren Metadaten, Bildern,
-                    Messwerten und automatischen Auswertungen.
-                </p>
-                <ul class="growlist">
-                    <li>• Tageweise Timeline mit Bildern &amp; Notizen</li>
-                    <li>• Verknüpfung zu Sensor-Daten (VPD, Klima, Licht)</li>
-                    <li>• Setup-Profile (Zelt, Licht, Dünger, Medium)</li>
-                    <li>• Export als Markdown / PDF</li>
-                </ul>
-            </article>
-
-            <aside class="card">
-                <h3 class="card-title">Geplante Features</h3>
-                <div>
-                    <span class="badge-soft">Grow-Vorlagen</span>
-                    <span class="badge-soft">Markdown-Generator</span>
-                    <span class="badge-soft">Sensor-Anbindung</span>
-                    <span class="badge-soft">Community-Optionen</span>
-                </div>
-                <p class="card-text" style="margin-top:10px;">
-                    Die aktuelle Version der Seite ist bewusst minimal gehalten.
-                    Neue Features werden getestet, dokumentiert und dann
-                    Schritt für Schritt veröffentlicht.
-                </p>
-            </aside>
-        </div>
     </section>
 
-    <!-- KONTAKT -->
-    <section id="kontakt">
-        <h2 class="section-heading">📬 Kontakt &amp; Follow</h2>
-        <p class="section-sub">
-            Du willst das Projekt verfolgen, Feedback geben oder später eigene
-            Setups mit Homegrowbook-Tools aufbauen? Melde dich gern.
-        </p>
-
-        <div class="contact-box">
-            <a class="contact-pill" href="https://instagram.com/home.growbook" target="_blank" rel="noopener">
-                <span>📸</span>
-                <span><strong>Instagram</strong> homegrowbook</span>
-            </a>
-
-            <a class="contact-pill" href="mailto:info@homegrowbook.de">
-                <span>✉️</span>
-                <span><strong>E-Mail</strong> Luis@homegrowbook.de</span>
-            </a>
-        </div>
-    </section>
 </main>
 
 <footer>
-    © <span id="year"></span> Homegrowbook – Smart Grow Automation · Projekt im Aufbau
+    © <span id="year"></span> Homegrowbook – Smart Grow Automation
 </footer>
 
 <script>
-    // aktuelles Jahr im Footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>

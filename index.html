@@ -1,16 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homegrowbook</title>
+    <title>Homegrowbook – Smart Grow Automation</title>
+    <meta name="description" content="Homegrowbook – dein digitales Ökosystem für Indoor-Growing, Sensoren, Automatisierung und Grow-Dokumentation.">
+
+    <!-- Externes CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <img src="assets/925385AB-2306-436A-B880-56F961A7DA34.png" alt="Homegrowbook Logo" width="200">
-    </header>
-    <main>
-        <!-- Original content of index.html goes here -->
-    </main>
+
+<!-- ===== NAVBAR (MOBILE + DESKTOP) ===== -->
+<header class="nav">
+    <div class="nav-inner">
+
+        <!-- LOGO + TITLE -->
+        <a href="#top" class="nav-brand">
+            <div class="nav-logo">
+                <img src="assets/925385AB-2306-436A-B880-56F961A7DA34.png" alt="Logo">
+            </div>
+            <div class="nav-title">homegrowbook</div>
+        </a>
+
+        <!-- DESKTOP LINKS -->
+        <nav class="nav-links">
+            <a href="#projekt" class="nav-link">Projekt</a>
+            <a href="#automation" class="nav-link">Automation</a>
+            <a href="#growlogs" class="nav-link">Growlogs</a>
+            <a class="nav-cta"
+               href="https://www.instagram.com/homegrowbook/"
+               target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+        </nav>
+
+        <!-- MOBILE BURGER -->
+        <div class="nav-burger" id="navBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="nav-mobile" id="navMobile">
+        <a href="#projekt" class="nav-mobile-link">Projekt</a>
+        <a href="#automation" class="nav-mobile-link">Automation</a>
+        <a href="#growlogs" class="nav-mobile-link">Growlogs</a>
+        <a href="https://www.instagram.com/homegrowbook/"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-mobile-link">Instagram</a>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <div class="hero-badge">Projekt · live im Aufbau</div>
+
+            <h1>Smart Indoor Growing<br><span>mit Homegrowbook</span></h1>
+
+            <p class="hero-sub">
+                Ein vollautomatisiertes Grow-System auf Basis von Raspberry&nbsp;Pi,
+                Home&nbsp;Assistant, Sensoren &amp; Dokumentation.  
+                Alles offen, transparent und für alle Grower nutzbar.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projekt" class="btn-primary">Projekt ansehen</a>
+                <a href="https://www.instagram.com/homegrowbook/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-ghost">
+                    Instagram Updates
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-logo">
+                <img src="assets/925385AB-2306-436A-B880-56F961A7DA34.png" alt="Homegrowbook Logo">
+            </div>
+            <p class="hero-card-caption">
+                Das offizielle Symbol für das Homegrowbook-Ökosystem:  
+                Wissen, Wachstum, Automation.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJEKT -->
+    <section id="projekt">
+        <h2 class="section-heading">🌱 Das Projekt</h2>
+        <p class="section-sub">
+            Ein dokumentierter High-Tech-Grow: Sensoren, Automation, Dashboards
+            und komplette Transparenz über jeden Schritt.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3 class="card-title">Smart Grow Hub</h3>
+                <p class="card-text">
+                    Home Assistant + Raspberry Pi steuern das gesamte System.
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Daten statt Gefühl</h3>
+                <p class="card-text">
+                    VPD, Temperatur, Feuchte, Licht – alles erfasst &amp; analysiert.
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Dokumentation</h3>
+                <p class="card-text">
+                    Jeder Grow wird ein Kapitel im Homegrowbook.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATION -->
+    <section id="automation">
+        <h2 class="section-heading">⚙️ Automation</h2>
+        <p class="section-sub">
+            Das Ziel: ein System, das sich selbst steuert – mit Sensoren,
+            Triggern &amp; intelligenten Regeln.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3 class="card-title">Home Assistant</h3>
+                <p class="card-text">
+                    Zentrale Plattform für Regeln, Sensorwerte und Kontrolle.
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Sensor-System</h3>
+                <p class="card-text">
+                    Feuchte, Temperatur, VPD, Licht – alles integriert.
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Automatische Abläufe</h3>
+                <p class="card-text">
+                    Lüfter, Licht &amp; Feuchte werden automatisch gesteuert.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROWLOGS -->
+    <section id="growlogs">
+        <h2 class="section-heading">📓 Growlogs</h2>
+        <p class="section-sub">
+            Bald verfügbar: Dokumentierte Runs, Bilder, Messwerte &amp; Templates.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> Homegrowbook – Smart Grow Automation
+</footer>
+
+<!-- SCRIPTS -->
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>

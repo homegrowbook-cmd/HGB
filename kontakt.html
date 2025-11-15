@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="seite2.html">Seite 2</a>
+      <a href="about.html">Über</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Kontakt</h1>
+    <form class="contact-form" action="mailto:deine-email@example.com" method="post" enctype="text/plain">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        E‑Mail
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Nachricht
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+      </div>
+      <p class="note">Hinweis: action="mailto:" hängt vom Benutzer-Setup ab; ersetze durch ein Backend-Endpoint falls vorhanden.</p>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 HomeGrowBook</p>
+  </footer>
+</body>
+</html>

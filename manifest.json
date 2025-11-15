@@ -1,21 +1,14 @@
-{
-  "name": "homegrowbook",
-  "short_name": "homegrowbook",
-  "description": "Smart Indoor Growing mit Raspberry Pi, Home Assistant, Sensoren & Automationen.",
-  "lang": "de-DE",
-  "start_url": "/",
+{  
+  "name": "HomeGrowBook",
+  "short_name": "HGB",
+  "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#020304",
-  "theme_color": "#020304",
+  "background_color": "#ffffff",
+  "theme_color": "#0077cc",
   "icons": [
     {
-      "src": "assets/9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ]

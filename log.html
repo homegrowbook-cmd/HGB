@@ -1,1 +1,331 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Log Page</title>\n    <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n    <header>\n        <h1>Log</h1>\n    </header>\n    <main>\n        <section>\n            <p>This is the log page.</p>\n        </section>\n    </main>\n    <footer>\n        <p>© 2025 Homegrowbook</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Projekt Log – homegrowbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Basic Meta -->
+  <meta name="description" content="Projekt Log und Dokumentation von homegrowbook – Smart Indoor Growing">
+  <meta name="theme-color" content="#020304">
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png">
+  <link rel="apple-touch-icon" href="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png">
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --bg: #050708;
+      --bg-elevated: #0c1014;
+      --bg-soft: #11161c;
+      --accent: #57ff92;
+      --accent-soft: rgba(87, 255, 146, 0.12);
+      --accent-border: rgba(87, 255, 146, 0.4);
+      --text-main: #f6f7fb;
+      --text-muted: #a3a8b5;
+      --pill-bg: #121820;
+      --border-subtle: #1f2630;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.6);
+      --max-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #101620 0, #050708 55%, #000000 100%);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--max-width);
+      padding: 16px 18px 40px;
+    }
+
+    @media (min-width: 768px) {
+      .page {
+        padding: 24px 24px 64px;
+      }
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 14px;
+      border-radius: var(--radius-lg);
+      background: rgba(6, 9, 12, 0.96);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 10px;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .logo {
+      height: 28px;
+      width: 28px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      color: var(--text-main);
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-main);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent-border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #020304;
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(87, 255, 146, 0.35);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(87, 255, 146, 0.45);
+    }
+
+    /* CONTENT */
+
+    .content {
+      margin-top: 26px;
+      background: radial-gradient(circle at top left, #151d26 0, #0b1016 45%, #050708 100%);
+      border-radius: 28px;
+      padding: 22px 18px 26px;
+      border: 1px solid rgba(73, 90, 110, 0.35);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        margin-top: 34px;
+        padding: 30px 28px 32px;
+      }
+    }
+
+    .content-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 11px;
+      border-radius: var(--radius-pill);
+      background: rgba(9, 15, 22, 0.86);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 12px;
+    }
+
+    .content-label-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(87, 255, 146, 0.8);
+    }
+
+    .content-title {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 0 0 20px;
+    }
+
+    .content-title span.highlight {
+      color: var(--accent);
+    }
+
+    @media (min-width: 768px) {
+      .content-title {
+        font-size: 2.6rem;
+      }
+    }
+
+    .content-text {
+      margin: 0 0 20px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      max-width: 48rem;
+    }
+
+    .content-text ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .content-text li {
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER MINI */
+
+    .footer {
+      margin-top: 24px;
+      padding: 14px 4px 0;
+      border-top: 1px solid rgba(32, 40, 52, 0.9);
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
+             alt="homegrowbook Logo"
+             class="logo">
+        <div class="brand-text">
+          <span class="brand-name">homegrowbook</span>
+          <span class="brand-sub">Smart Indoor Growing</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a class="btn btn-ghost" href="./index.html">Zurück</a>
+        <a class="btn btn-accent" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content">
+      <div class="content-label">
+        <span class="content-label-dot"></span>
+        <span>Projekt Log</span>
+      </div>
+
+      <h1 class="content-title">
+        Projekt <span class="highlight">Dokumentation</span>
+      </h1>
+
+      <div class="content-text">
+        <p>Hier findest du in Kürze die vollständige Dokumentation des homegrowbook Projekts.</p>
+        <p>Das Projekt befindet sich aktuell im Aufbau. Die Dokumentation wird kontinuierlich erweitert mit:</p>
+        <ul>
+          <li>Hardware-Setup und Konfiguration</li>
+          <li>Sensor-Integration und Kalibrierung</li>
+          <li>Home Assistant Automationen</li>
+          <li>VPD-Berechnungen und Optimierung</li>
+          <li>Grow-Logs und Erfahrungsberichte</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> homegrowbook · Projekt im Aufbau</span>
+      <span>
+        Folgen auf
+        <a href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">Instagram</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    // Jahreszahl automatisch setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

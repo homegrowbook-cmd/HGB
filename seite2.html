@@ -7,25 +7,52 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="seite2.html">Seite 2</a>
-      <a href="about.html">Über</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
+  <div class="page">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
+             alt="homegrowbook Logo"
+             class="logo">
+        <div class="brand-text">
+          <span class="brand-name">homegrowbook</span>
+          <span class="brand-sub">Smart Indoor Growing</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-accent" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+      </div>
+    </header>
 
-  <main>
-    <h1>Seite 2</h1>
-    <section>
-      <p>Inhalt für Seite 2. Ersetze diesen Text durch den echten Inhalt.</p>
-    </section>
-    <p><a href="index.html">Zurück zur Startseite</a></p>
-  </main>
+    <!-- HERO -->
+    <main class="hero">
+      <section>
+        <h1 class="hero-title">Seite 2</h1>
+        <p class="hero-subtitle">
+          Inhalt für Seite 2. Ersetze diesen Text durch den echten Inhalt.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="index.html">Zurück zur Startseite</a>
+        </div>
+      </section>
+    </main>
 
-  <footer>
-    <p>© 2025 HomeGrowBook</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> homegrowbook · Projekt im Aufbau</span>
+      <span>
+        Folgen auf
+        <a href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">Instagram</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    // Jahreszahl automatisch setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

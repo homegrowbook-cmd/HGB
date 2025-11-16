@@ -383,6 +383,7 @@ body{
   display:flex;
   align-items:baseline;
   gap:6px;
+  flex-wrap:wrap;
 }
 
 .metric-value strong{
@@ -422,8 +423,8 @@ body{
   .navbar{
     flex-direction:row;
     flex-wrap: wrap;
-    gap:12px;
-    padding:10px 14px;
+    gap:8px;
+    padding:10px 12px;
   }
   
   .nav-left{
@@ -433,6 +434,20 @@ body{
   
   .nav-right{
     flex-shrink: 0;
+    gap: 6px;
+  }
+  
+  .btn{
+    font-size: 0.78rem;
+    padding: 6px 12px;
+  }
+  
+  .brand-name{
+    font-size: 0.9rem;
+  }
+  
+  .brand-sub{
+    font-size: 0.65rem;
   }
   
   .hero-title{

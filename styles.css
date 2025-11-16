@@ -518,6 +518,25 @@ body{
   .nav-left{
     flex: 0 1 auto;
     min-width: 0;
+    overflow: hidden;
+  }
+  
+  .brand-text{
+    overflow: hidden;
+  }
+  
+  .brand-name{
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .brand-sub{
+    font-size: 0.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .nav-right{
@@ -530,14 +549,6 @@ body{
   .btn{
     font-size: 0.75rem;
     padding: 6px 10px;
-  }
-  
-  .brand-name{
-    font-size: 0.85rem;
-  }
-  
-  .brand-sub{
-    display: none;
   }
   
   .logo{

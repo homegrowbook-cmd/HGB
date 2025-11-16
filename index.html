@@ -7,22 +7,119 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="seite2.html">Seite 2</a>
-      <a href="about.html">Über</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
+  <div class="page">
 
-  <main>
-    <h1>Startseite</h1>
-    <p>Willkommen — ersetze diesen Platzhalter durch den echten Inhalt deiner Startseite.</p>
-  </main>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
+             alt="homegrowbook Logo"
+             class="logo">
+        <div class="brand-text">
+          <span class="brand-name">homegrowbook</span>
+          <span class="brand-sub">Smart Indoor Growing</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a class="btn btn-ghost" href="#projekt">Projekt</a>
+        <a class="btn btn-accent" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+      </div>
+    </header>
 
-  <footer>
-    <p>© 2025 HomeGrowBook</p>
-  </footer>
+    <!-- HERO -->
+    <main class="hero" id="projekt">
+      <section>
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          <span>Projekt · Live im Aufbau</span>
+        </div>
+
+        <h1 class="hero-title">
+          Smart Indoor Growing<br>
+          <span class="highlight">mit homegrowbook</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Ein vollautomatisiertes Grow-System auf Basis von <strong>Raspberry Pi</strong>,
+          <strong>Home Assistant</strong>, Sensoren &amp; Dokumentation.
+          Alles offen, transparent und für alle Grower nutzbar.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="./log.html">
+            Projekt Log
+          </a>
+          <a class="btn btn-ghost" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
+            Instagram Updates
+          </a>
+        </div>
+
+        <div class="hero-badge-row">
+          <div class="pill"><strong>Raspberry&nbsp;Pi</strong> als Grow-Hub</div>
+          <div class="pill">Automationen mit Home&nbsp;Assistant</div>
+          <div class="pill">Sensoren, VPD, Licht &amp; Klima</div>
+        </div>
+      </section>
+
+      <!-- HERO VISUAL / MOCKUP -->
+      <aside class="hero-visual" aria-hidden="true">
+        <div class="hero-visual-inner" id="projekt-log">
+          <div class="mock-header">
+            <div class="mock-header-left">
+              <span class="mock-dot"></span>
+              <span>Live-Dashboard</span>
+            </div>
+            <span class="mock-tag">Open Setup</span>
+          </div>
+
+          <div class="mock-body">
+            <div class="mock-main-text">
+              <strong>homegrowbook Grow-Hub</strong><br>
+              Raspberry&nbsp;Pi + Home&nbsp;Assistant überwachen Klima, Licht
+              und Verbrauch. Alle Einstellungen, Sensoren und Grows werden
+              als offene Dokumentation veröffentlicht.
+            </div>
+
+            <div class="mock-metrics">
+              <div class="metric-card">
+                <div class="metric-label">Zelt · Klima</div>
+                <div class="metric-value">
+                  <strong>24.3°C</strong><span>/ 58&nbsp;% rF</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Leaf-VPD</div>
+                <div class="metric-value">
+                  <strong>1.25</strong><span>kPa · optimal</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Status</div>
+                <div class="metric-value">
+                  <strong>Autonom</strong><span>Bewässerung &amp; Logging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> homegrowbook · Projekt im Aufbau</span>
+      <span>
+        Folgen auf
+        <a href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">Instagram</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    // Jahreszahl automatisch setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

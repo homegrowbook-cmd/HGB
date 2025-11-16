@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Startseite</title>
+  <title>Equipment – homegrowbook</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,24 +22,25 @@
         </div>
       </div>
       <div class="nav-right">
+        <a class="btn btn-ghost" href="./index.html">Home</a>
         <div class="dropdown" id="aboutDropdown">
           <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('aboutDropdown')">
             About us
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="projekte.html">
+            <a class="dropdown-item" href="./projekte.html">
               Projekte
             </a>
-            <a class="dropdown-item" href="equipment.html">
+            <a class="dropdown-item" href="./equipment.html">
               Equipment
             </a>
-            <a class="dropdown-item" href="partner.html">
+            <a class="dropdown-item" href="./partner.html">
               Partner
             </a>
-            <a class="dropdown-item" href="kontakt.html">
+            <a class="dropdown-item" href="./kontakt.html">
               Kontakt
             </a>
-            <a class="dropdown-item" href="impressum.html">
+            <a class="dropdown-item" href="./impressum.html">
               Impressum
             </a>
           </div>
@@ -60,37 +61,34 @@
             </a>
           </div>
         </div>
-        <a class="language-switcher" href="./en/index.html" title="Switch to English">
+        <a class="language-switcher" href="./en/equipment.html" title="Switch to English">
           <span class="flag">🇬🇧</span>
         </a>
       </div>
     </header>
 
     <!-- HERO -->
-    <main class="hero hero-split" id="projekt">
+    <main class="hero hero-split">
       <section>
         <div class="hero-label">
           <span class="hero-label-dot"></span>
-          <span>Projekt · Live im Aufbau</span>
+          <span>Equipment · Live Monitoring</span>
         </div>
 
         <h1 class="hero-title">
-          Smart Indoor Growing<br>
-          <span class="highlight">mit homegrowbook</span>
+          Unser Equipment<br>
+          <span class="highlight">2 Grow-Zelte</span>
         </h1>
 
         <p class="hero-subtitle">
-          Ein vollautomatisiertes Grow-System auf Basis von <strong>Raspberry Pi</strong>,
-          <strong>Home Assistant</strong>, Sensoren &amp; Dokumentation.
-          Alles offen, transparent und für alle Grower nutzbar.
+          Zwei vollautomatisierte Grow-Zelte, überwacht mit <strong>Raspberry Pi</strong>,
+          <strong>Home Assistant</strong> und präzisen Sensoren. Live-Daten zu Klima,
+          VPD und mehr.
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-accent" href="./log.html">
             Projekt Log
-          </a>
-          <a class="btn btn-ghost" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
-            Instagram Updates
           </a>
           <a class="btn btn-ghost" href="https://growdiaries.com/grower/homegrowbook" target="_blank" rel="noreferrer">
             GrowDiaries
@@ -98,48 +96,47 @@
         </div>
 
         <div class="hero-badge-row">
-          <div class="pill"><strong>Raspberry&nbsp;Pi</strong> als Grow-Hub</div>
-          <div class="pill">Automationen mit Home&nbsp;Assistant</div>
-          <div class="pill">Sensoren, VPD, Licht &amp; Klima</div>
+          <div class="pill"><strong>2 Zelte</strong> · Autonom</div>
+          <div class="pill">VPD-Optimierung</div>
+          <div class="pill">24/7 Monitoring</div>
         </div>
       </section>
 
-      <!-- HERO VISUAL / MOCKUP -->
+      <!-- HERO VISUAL / MOCKUP FOR ZELT 1 -->
       <aside class="hero-visual" aria-hidden="true">
-        <div class="hero-visual-inner" id="projekt-log">
+        <div class="hero-visual-inner">
           <div class="mock-header">
             <div class="mock-header-left">
               <span class="mock-dot"></span>
-              <span>Live-Dashboard</span>
+              <span>Zelt 1 – Live-Daten</span>
             </div>
-            <span class="mock-tag">Open Setup</span>
+            <span class="mock-tag">Aktiv</span>
           </div>
 
           <div class="mock-body">
             <div class="mock-main-text">
-              <strong>homegrowbook Grow-Hub</strong><br>
-              Raspberry&nbsp;Pi + Home&nbsp;Assistant überwachen Klima, Licht
-              und Verbrauch. Alle Einstellungen, Sensoren und Grows werden
-              als offene Dokumentation veröffentlicht.
+              <strong>Zelt 1 · Vegetation</strong><br>
+              Optimiert für das vegetative Wachstum mit präziser Klimasteuerung
+              und automatischer Bewässerung.
             </div>
 
             <div class="mock-metrics">
               <div class="metric-card">
-                <div class="metric-label">Zelt · Klima</div>
+                <div class="metric-label">Temperatur</div>
                 <div class="metric-value">
-                  <strong>24.3°C</strong><span>/ 58&nbsp;% rF</span>
+                  <strong>23.8°C</strong>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Luftfeuchtigkeit</div>
+                <div class="metric-value">
+                  <strong>62%</strong><span>rF</span>
                 </div>
               </div>
               <div class="metric-card">
                 <div class="metric-label">Leaf-VPD</div>
                 <div class="metric-value">
-                  <strong>1.25</strong><span>kPa · optimal</span>
-                </div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-label">Status</div>
-                <div class="metric-value">
-                  <strong>Autonom</strong> <span>Bewässerung &amp; Logging</span>
+                  <strong>1.18</strong><span>kPa</span>
                 </div>
               </div>
             </div>
@@ -147,6 +144,73 @@
         </div>
       </aside>
     </main>
+
+    <!-- SECOND TENT SECTION -->
+    <section class="hero hero-split" style="margin-top: 24px;">
+      <aside class="hero-visual" aria-hidden="true">
+        <div class="hero-visual-inner">
+          <div class="mock-header">
+            <div class="mock-header-left">
+              <span class="mock-dot"></span>
+              <span>Zelt 2 – Live-Daten</span>
+            </div>
+            <span class="mock-tag">Aktiv</span>
+          </div>
+
+          <div class="mock-body">
+            <div class="mock-main-text">
+              <strong>Zelt 2 · Blüte</strong><br>
+              Konfiguriert für die Blütephase mit angepasstem Licht- und Klimazyklus
+              für optimale Erträge.
+            </div>
+
+            <div class="mock-metrics">
+              <div class="metric-card">
+                <div class="metric-label">Temperatur</div>
+                <div class="metric-value">
+                  <strong>25.1°C</strong>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Luftfeuchtigkeit</div>
+                <div class="metric-value">
+                  <strong>52%</strong><span>rF</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Leaf-VPD</div>
+                <div class="metric-value">
+                  <strong>1.42</strong><span>kPa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          <span>Zelt 2 · Blütephase</span>
+        </div>
+
+        <h2 class="hero-title">
+          Zweites Zelt<br>
+          <span class="highlight">Blüteoptimiert</span>
+        </h2>
+
+        <p class="hero-subtitle">
+          Das zweite Zelt ist speziell für die Blütephase konfiguriert mit
+          reduzierter Luftfeuchtigkeit und optimiertem Lichtspektrum.
+        </p>
+
+        <div class="hero-badge-row">
+          <div class="pill"><strong>12/12</strong> Lichtzyklus</div>
+          <div class="pill">Niedrige rF · 50-55%</div>
+          <div class="pill">Höherer VPD</div>
+        </div>
+      </section>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">

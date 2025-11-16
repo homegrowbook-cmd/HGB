@@ -373,14 +373,27 @@
       </div>
       <div class="nav-right">
         <a class="btn btn-ghost" href="./index.html">Back</a>
-        <a class="btn btn-ghost" href="./kontakt.html">Contact</a>
-        <a class="btn btn-ghost" href="./impressum.html">Imprint</a>
-        <a class="btn btn-ghost" href="./partner.html">Partners</a>
+        <div class="dropdown" id="aboutDropdown">
+          <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('aboutDropdown')">
+            About Us
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./kontakt.html">
+              Contact
+            </a>
+            <a class="dropdown-item" href="./impressum.html">
+              Imprint
+            </a>
+          </div>
+        </div>
         <div class="dropdown" id="socialDropdown">
           <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('socialDropdown')">
             Social
           </button>
           <div class="dropdown-menu">
+            <a class="dropdown-item" href="./partner.html">
+              Partners
+            </a>
             <a class="dropdown-item" href="https://growdiaries.com/grower/homegrowbook" target="_blank" rel="noreferrer">
               GrowDiaries
             </a>

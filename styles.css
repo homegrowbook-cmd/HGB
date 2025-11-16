@@ -510,32 +510,43 @@ body{
 @media (max-width: 768px){
   .navbar{
     flex-direction:row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap:8px;
     padding:10px 12px;
   }
   
   .nav-left{
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
   }
   
   .nav-right{
+    flex: 1 1 auto;
     flex-shrink: 0;
     gap: 6px;
+    justify-content: flex-end;
   }
   
   .btn{
-    font-size: 0.78rem;
-    padding: 6px 12px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
   
   .brand-name{
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .brand-sub{
-    font-size: 0.65rem;
+    display: none;
+  }
+  
+  .logo{
+    height: 24px;
+    width: 24px;
+  }
+  
+  .dropdown-toggle::after{
+    display: none;
   }
   
   .hero-title{

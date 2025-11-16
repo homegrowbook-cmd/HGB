@@ -24,11 +24,25 @@
         <a class="btn btn-ghost" href="./index.html">Home</a>
         <a class="btn btn-ghost" href="./kontakt.html">Kontakt</a>
         <a class="btn btn-ghost" href="./impressum.html">Impressum</a>
-        <a class="btn btn-ghost" href="https://growdiaries.com/grower/homegrowbook" target="_blank" rel="noreferrer">
-          GrowDiaries
-        </a>
-        <a class="btn btn-accent" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
-          Instagram
+        <div class="dropdown" id="partnerDropdown">
+          <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('partnerDropdown')">
+            Partner
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://growdiaries.com/grower/homegrowbook" target="_blank" rel="noreferrer">
+              GrowDiaries
+            </a>
+            <a class="dropdown-item" href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">
+              Instagram
+            </a>
+            <a class="dropdown-item" href="https://www.youtube.com/@HOMEGROWBOOK" target="_blank" rel="noreferrer">
+              YouTube
+            </a>
+          </div>
+        </div>
+        <a class="language-switcher" href="./en/seite2.html" title="Switch to English">
+          <span class="flag">🇬🇧</span>
+          EN
         </a>
       </div>
     </header>
@@ -63,6 +77,22 @@
   <script>
     // Jahreszahl automatisch setzen
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dropdown toggle function
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.toggle('active');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>

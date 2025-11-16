@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Kontakt</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Imprint – homegrowbook</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <div class="page">
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav-left">
-        <img src="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
+        <img src="../9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
              alt="homegrowbook Logo"
              class="logo">
         <div class="brand-text">
@@ -22,10 +22,10 @@
       </div>
       <div class="nav-right">
         <a class="btn btn-ghost" href="./index.html">Home</a>
-        <a class="btn btn-ghost" href="./impressum.html">Impressum</a>
+        <a class="btn btn-ghost" href="./kontakt.html">Contact</a>
         <div class="dropdown" id="partnerDropdown">
           <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('partnerDropdown')">
-            Partner
+            Partners
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="https://growdiaries.com/grower/homegrowbook" target="_blank" rel="noreferrer">
@@ -39,9 +39,9 @@
             </a>
           </div>
         </div>
-        <a class="language-switcher" href="./en/kontakt.html" title="Switch to English">
-          <span class="flag">🇬🇧</span>
-          EN
+        <a class="language-switcher" href="../impressum.html" title="Zu Deutsch wechseln">
+          <span class="flag">🇩🇪</span>
+          DE
         </a>
       </div>
     </header>
@@ -49,34 +49,52 @@
     <!-- HERO -->
     <main class="hero">
       <section>
-        <h1 class="hero-title">Kontakt</h1>
-        <form class="contact-form" action="mailto:Luis@homegrowbook.de" method="post" enctype="text/plain">
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            E‑Mail
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Nachricht
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-          <div class="form-actions">
-            <button type="submit">Absenden</button>
-            <button type="reset">Zurücksetzen</button>
-          </div>
-          <p class="note">Hinweis: action="mailto:" hängt vom Benutzer-Setup ab; ersetze durch ein Backend-Endpoint falls vorhanden.</p>
-        </form>
+        <h1 class="hero-title">Imprint</h1>
+        <div class="hero-subtitle">
+          <p><strong>Information according to § 5 TMG</strong></p>
+          <p>
+            homegrowbook<br>
+            Luis [Lastname]<br>
+            [Address]<br>
+            [ZIP] [City]
+          </p>
+          <p>
+            <strong>Contact:</strong><br>
+            Email: Luis@homegrowbook.de
+          </p>
+          <p>
+            <strong>Disclaimer:</strong>
+          </p>
+          <p>
+            <strong>Liability for Content</strong><br>
+            The contents of our pages were created with the greatest care. 
+            However, we cannot guarantee the accuracy, completeness and timeliness 
+            of the content.
+          </p>
+          <p>
+            <strong>Liability for Links</strong><br>
+            Our offer contains links to external websites of third parties, over 
+            whose content we have no influence. For the content of the linked 
+            pages, the respective provider or operator of the pages is always 
+            responsible.
+          </p>
+          <p>
+            <strong>Copyright</strong><br>
+            The content and works created by the site operators on these pages 
+            are subject to German copyright law. Duplication, processing, 
+            distribution and any kind of exploitation outside the limits of 
+            copyright require the written consent of the respective author or 
+            creator.
+          </p>
+        </div>
       </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <span>© <span id="year"></span> homegrowbook · Projekt im Aufbau</span>
+      <span>© <span id="year"></span> homegrowbook · Project in Development</span>
       <span>
-        Folgen auf
+        Follow on
         <a href="https://instagram.com/homegrowbook" target="_blank" rel="noreferrer">Instagram</a>
         ·
         <a href="https://www.youtube.com/@HOMEGROWBOOK" target="_blank" rel="noreferrer">YouTube</a>
@@ -87,7 +105,7 @@
   </div>
 
   <script>
-    // Jahreszahl automatisch setzen
+    // Set year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Dropdown toggle function

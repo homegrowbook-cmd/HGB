@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>homegrowbook Design Template</title>
+  
+  <!-- homegrowbook Design System CSS -->
+  <link rel="stylesheet" href="design-system-export.css">
+  
+  <!-- Optional: Eigene zusätzliche Styles -->
+  <style>
+    /* Hier können eigene Anpassungen eingefügt werden */
+  </style>
+</head>
+<body>
+  <div class="page">
+    
+    <!-- ========================================
+         NAVBAR / NAVIGATION
+         ======================================== -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="./9A9F0B7F-D874-407D-B8BB-FD17E4C85A9F.png"
+             alt="Logo"
+             class="logo">
+        <div class="brand-text">
+          <span class="brand-name">Brand Name</span>
+          <span class="brand-sub">Tagline / Untertitel</span>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <!-- Einfacher Link-Button -->
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        
+        <!-- Dropdown-Menü Beispiel -->
+        <div class="dropdown" id="menuDropdown">
+          <button class="btn btn-ghost dropdown-toggle" onclick="toggleDropdown('menuDropdown')">
+            Menü
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="page1.html">Seite 1</a>
+            <a class="dropdown-item" href="page2.html">Seite 2</a>
+            <a class="dropdown-item" href="page3.html">Seite 3</a>
+          </div>
+        </div>
+        
+        <!-- Language Switcher (Optional) -->
+        <a class="language-switcher" href="./en/index.html" title="Switch to English">
+          <span class="flag">🇬🇧</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ========================================
+         HERO / MAIN CONTENT
+         
+         Option 1: Einfaches Layout (unten)
+         Option 2: Split Layout (auskommentiert)
+         ======================================== -->
+    
+    <!-- OPTION 1: Einfaches Hero Layout -->
+    <main class="hero">
+      <section>
+        <h1 class="hero-title">Titel der Seite</h1>
+        <p class="hero-subtitle">
+          Dies ist ein <strong>Beschreibungstext</strong>. Hier kann beliebiger Content eingefügt werden.
+          Das Design unterstützt sowohl kurze als auch längere Texte.
+        </p>
+        
+        <!-- Call-to-Action Buttons (Optional) -->
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#main-action">Hauptaktion</a>
+          <a class="btn btn-ghost" href="#secondary">Zweitaktion</a>
+        </div>
+        
+        <!-- Badges/Pills (Optional) -->
+        <div class="hero-badge-row">
+          <div class="pill"><strong>Feature</strong> 1</div>
+          <div class="pill"><strong>Feature</strong> 2</div>
+          <div class="pill">Feature 3</div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- OPTION 2: Split Hero Layout (Zwei-Spalten)
+    <main class="hero hero-split">
+      <section>
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          <span>Status · Label</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Haupttitel der Seite<br>
+          <span class="highlight">mit Highlight</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Beschreibungstext mit <strong>hervorgehobenen</strong> Elementen.
+          Dies ist die Einführung für die Seite.
+        </p>
+        
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#action">Hauptaktion</a>
+          <a class="btn btn-ghost" href="#info">Mehr Info</a>
+        </div>
+        
+        <div class="hero-badge-row">
+          <div class="pill"><strong>Tech</strong> Stack</div>
+          <div class="pill">Feature Details</div>
+        </div>
+      </section>
+      
+      <aside class="hero-visual">
+        <div class="hero-visual-inner">
+          <div class="mock-header">
+            <div class="mock-header-left">
+              <span class="mock-dot"></span>
+              <span>Dashboard</span>
+            </div>
+            <span class="mock-tag">Live</span>
+          </div>
+          
+          <div class="mock-body">
+            <div class="mock-main-text">
+              <strong>Visual Content</strong><br>
+              Hier kann ein Mockup, Screenshot oder andere visuelle Inhalte platziert werden.
+            </div>
+            
+            <div class="mock-metrics">
+              <div class="metric-card">
+                <div class="metric-label">Metrik 1</div>
+                <div class="metric-value">
+                  <strong>123</strong><span>Einheit</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Metrik 2</div>
+                <div class="metric-value">
+                  <strong>456</strong><span>Einheit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    -->
+    
+    <!-- ========================================
+         FORMULAR BEISPIEL (Optional)
+         ======================================== -->
+    <!--
+    <main class="hero">
+      <section>
+        <h1 class="hero-title">Kontakt</h1>
+        
+        <form class="contact-form" action="#" method="post">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          
+          <label>
+            E-Mail
+            <input type="email" name="email" required>
+          </label>
+          
+          <label>
+            Nachricht
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          
+          <div class="form-actions">
+            <button type="submit">Absenden</button>
+            <button type="reset">Zurücksetzen</button>
+          </div>
+          
+          <p class="note">Hinweis: Formular-Action muss angepasst werden.</p>
+        </form>
+      </section>
+    </main>
+    -->
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+      <span>© <span id="year"></span> Dein Projekt · Status</span>
+      <span>
+        Links:
+        <a href="https://example.com" target="_blank" rel="noreferrer">Link 1</a>
+        ·
+        <a href="https://example.com" target="_blank" rel="noreferrer">Link 2</a>
+      </span>
+    </footer>
+    
+  </div>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  
+  <!-- homegrowbook Design System JavaScript -->
+  <script src="design-system-export.js"></script>
+  
+  <!-- Optional: Eigene zusätzliche Scripts -->
+  <script>
+    // Hier können eigene JavaScript-Funktionen eingefügt werden
+    
+    // Beispiel: Console Log beim Laden
+    console.log('homegrowbook Design System geladen');
+  </script>
+  
+</body>
+</html>
